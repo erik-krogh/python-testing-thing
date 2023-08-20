@@ -1,9 +1,7 @@
-import re
+import utils.add as adder
 
 def add(a, b):
-    re.compile(r'(?:.|\n)*b', re.DOTALL) # Injected vulnerability, but benign.
-
-    return a + b
+    return adder.add(a, b)
 
 def subtract(a, b):
     return a - b
